@@ -27,7 +27,7 @@
     "handlebars": "^3.0.1",
     "hbsfy": "^2.2.1",
     "http-route-proxy": "^0.2.2",
-    "less": "^2.4.0",
+    "less": "^3.0.2",
     "moment": "^2.10.3",
     "rethinkdb": "^2.3.0",
     "virtual-dom": "^2.0.1"
