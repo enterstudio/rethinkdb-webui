@@ -7,7 +7,9 @@
     "build": "mkdir -p dist && npm run build-js && npm run build-css && npm run build-static",
     "build-js": "browserify -t coffeeify -t browserify-handlebars src/coffee/app.coffee -o dist/cluster.js",
     "build-css": "cd src/less && cat styles* | lessc - ../../dist/cluster.css",
-    "build-static": "cd public && cp -a * ../dist/"
+    "build-static": "cd public && cp -a * ../dist/",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,12 +26,14 @@
     "browserify-handlebars": "^1.0.0",
     "coffeeify": "^2.0.0",
     "express": "^4.14.0",
-    "handlebars": "^3.0.1",
+    "handlebars": "^4.0.14",
     "hbsfy": "^2.2.1",
     "http-route-proxy": "^0.2.2",
-    "less": "^2.4.0",
+    "less": "^3.0.2",
     "moment": "^2.10.3",
     "rethinkdb": "^2.3.0",
-    "virtual-dom": "^2.0.1"
-  }
+    "virtual-dom": "^2.0.1",
+    "snyk": "^1.153.0"
+  },
+  "snyk": true
 }
